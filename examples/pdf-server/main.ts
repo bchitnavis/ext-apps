@@ -149,6 +149,16 @@ async function main() {
     }
   }
 
+  // Add Downloads folder for convenience
+  const downloadsPath = path.join(
+    process.env.USERPROFILE || process.env.HOME || "",
+    "Downloads",
+  );
+  if (fs.existsSync(downloadsPath)) {
+    allowedLocalDirs.add(downloadsPath);
+    console.error(`[pdf-server] Registered Downloads directory: ${downloadsPath}`);
+  }
+
   console.error(`[pdf-server] Ready (${urls.length} URL(s) configured)`);
 
   if (stdio) {

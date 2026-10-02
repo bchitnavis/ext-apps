@@ -16,3 +16,47 @@ __pycache__/
 
 # MCPB bundles (built artifacts)
 *.mcpb
+
+# ----- Added 2026-10-02: data files and generated artifacts -----
+# ----- Data files: never commit raw or extracted data -----
+*.csv
+*.tsv
+*.xlsx
+*.xlsm
+*.xls
+*.parquet
+*.pkl
+*.h5
+*.zip
+*.7z
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+*.duckdb.wal
+
+# ----- Secrets -----
+.env
+.env.local
+.env.*.local
+
+# ----- Python artifacts -----
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ----- Node artifacts -----
+build/
+
+# ----- Windows and .NET build artifacts -----
+*.obj
+*.pdb
+**/[Bb]in/[Dd]ebug/
+**/[Bb]in/[Rr]elease/
+**/[Bb]in/x64/
+**/[Bb]in/x86/
+**/[Oo]bj/
+*.log
